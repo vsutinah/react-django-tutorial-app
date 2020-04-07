@@ -17,5 +17,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('', include('leads.urls')),
+    path('', include('frontend.urls')),
+    path('', include('leads.urls'))
 ]
+
+# Make sure frontend loads before the leads.urls
